@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Windows;
 using System.Windows.Threading;
 using WpfApp1.ViewModel.ViewModel;
 
@@ -25,6 +26,7 @@ public class MainViewModel : ViewModelBase
         public override void Handle()
         {
             MVM.TB.Text = "Hello ";
+            MessageBox.Show("Hello");
             Next?.Handle();
         }
     }
@@ -34,6 +36,7 @@ public class MainViewModel : ViewModelBase
         public override void Handle()
         {
             MVM.TB.Text += "World ";
+            MessageBox.Show("World");
             Next?.Handle();
         }
     }
@@ -43,6 +46,7 @@ public class MainViewModel : ViewModelBase
         public override void Handle()
         {
             MVM.TB.Text += "! ";
+            MessageBox.Show("!");
             Next?.Handle();
         }
     }
